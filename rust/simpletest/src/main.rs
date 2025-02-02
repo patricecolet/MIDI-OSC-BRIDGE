@@ -18,17 +18,17 @@ fn main() -> std::io::Result<()> {
     
     // Wrap MIDI data in OSC messages
     let osc_note_on = OscMessage {
-        addr: "/midi/note_on".to_string(),
+        addr: "/midi".to_string(),
         args: vec![OscType::Blob(note_on.into())],
     };
 
     let osc_note_off = OscMessage {
-        addr: "/midi/note_off".to_string(),
+        addr: "/midi".to_string(),
         args: vec![OscType::Blob(note_off.into())],
     };
 
     let osc_control_change = OscMessage {
-        addr: "/midi/control_change".to_string(),
+        addr: "/midi".to_string(),
         args: vec![OscType::Blob(control_change.into())],
     };
     

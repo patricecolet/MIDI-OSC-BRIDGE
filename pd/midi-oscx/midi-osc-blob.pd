@@ -1,0 +1,14 @@
+#N canvas 950 174 450 300 12;
+#X obj 49 113 t a a;
+#X obj 81 207 route 3;
+#X obj 81 230 s \$1-midi-osc;
+#X obj 81 160 list trim;
+#X obj 81 136 oscparse;
+#X obj 81 184 route midi;
+#X obj 49 89 netreceive -u -b \$2;
+#X connect 0 1 4 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
